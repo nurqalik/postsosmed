@@ -34,6 +34,7 @@ const Content: React.FC = () => {
   const createPosting = api.post.create.useMutation({
     onSuccess: () => {
       void refetchPosts();
+      vibrate()
     },
   });
 
