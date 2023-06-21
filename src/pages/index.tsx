@@ -62,6 +62,7 @@ const Content: React.FC = () => {
             });
           }}
         />
+        <button onClick={vibrate}>Vibrate</button>
       </div>
     </div>
   );
