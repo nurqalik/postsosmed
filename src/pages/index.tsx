@@ -27,6 +27,10 @@ export default Home;
 const Content: React.FC = () => {
   const { data: posts, refetch: refetchPosts } = api.post.getAll.useQuery();
   
+  const vibrate = () => {
+    window.navigator.vibrate([200, 100, 200])
+  }
+
   const createPosting = api.post.create.useMutation({
     onSuccess: () => {
       void refetchPosts();
