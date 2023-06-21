@@ -9,8 +9,8 @@ export const Posting = ({
   const [content, setContent] = useState<string>("");
 
   const vibrate = () => {
-    window.navigator.vibrate([200, 100, 200])
-  }
+    window.navigator.vibrate([200, 100, 200]);
+  };
 
   return (
     <div className="card mt-5 border border-gray-200 bg-base-100 shadow-xl">
@@ -40,7 +40,7 @@ export const Posting = ({
           });
           setTitle("");
           setContent("");
-          vibrate()
+          vibrate();
         }}
         className="btn-primary btn"
         disabled={title.trim().length === 0 || content.trim().length === 0}
